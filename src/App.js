@@ -1,10 +1,9 @@
-import logo from "./platzi.webp";
 import "./App.css";
-import { TodoCounter } from "./TodoCounter";
-import { TodoSearch } from "./TodoSearch";
-import { TodoList } from "./TodoList";
-import { TodoItem } from "./TodoItem";
-import { CreateTodoButton } from "./CreateTodoButton";
+import { TodoCounter } from "./Components/TodoCounter/TodoCounter";
+import { TodoSearch } from "./Components/TodoSearch/TodoSearch";
+import { TodoList } from "./Components/TodoList/TodoList";
+import { TodoItem } from "./Components/TodoItem/TodoItem";
+import { CreateTodoButton } from "./Components/CreateTodo/CreateTodoButton";
 
 function App() {
   const defaultTodos = [

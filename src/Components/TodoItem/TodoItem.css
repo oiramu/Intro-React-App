@@ -10,8 +10,8 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.check {
-  background: url("./assets/circle-check.svg") no-repeat;
+.todo-item .check {
+  background: url("../../assets/circle-check.svg") no-repeat;
   background-size: 90%;
   background-position: center center;
   width: 2.5em;
@@ -20,17 +20,23 @@
   cursor: pointer;
 }
 
-p {
+.todo-item p {
   width: 70%;
   /*   height: 100%; */
 }
 
-.close-item {
-  background: url("./assets/x.svg") no-repeat;
+.todo-item .close-item {
+  background: url("../../assets/x.svg") no-repeat;
   background-size: 90%;
   background-position: center center;
   width: 1.2em;
   height: 1.2em;
   border: none;
   cursor: pointer;
+}
+
+.todo-item .close-item:hover {
+  background: url("../../assets/x-red.svg") no-repeat;
+  background-size: 90%;
+  background-position: center center;
 }

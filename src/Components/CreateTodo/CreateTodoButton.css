@@ -21,6 +21,6 @@
   background-position: center center; */
 }
 
-button:hover {
+.createTodo-container button:hover {
   background-color: #5f7cd9;
 }
