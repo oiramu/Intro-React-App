@@ -7,15 +7,32 @@ import { TodoItem } from "./TodoItem";
 import { CreateTodoButton } from "./CreateTodoButton";
 
 function App() {
+  const defaultTodos = [
+    {
+      text: "Todo 1",
+      completed: false,
+    },
+    {
+      text: "Todo 2",
+      completed: false,
+    },
+    {
+      text: "Todo 3",
+      completed: false,
+    },
+  ];
+
   return (
-    <div className="App">
-      <TodoCounter />
+    <>
+      <TodoCounter total={16} completed={11} />
       <TodoSearch />
       <TodoList>
-        <TodoItem />
+        {defaultTodos.map((todo, index) => (
+          <TodoItem key={index} text={todo.text} completed={todo.completed} />
+        ))}
       </TodoList>
       <CreateTodoButton />
-    </div>
+    </>
   );
 }
 

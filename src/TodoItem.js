@@ -1,8 +1,8 @@
-function TodoItem() {
+function TodoItem({ text, completed }) {
   return (
     <li>
       <button>V</button>
-      <p>Llorar con la llorona</p>
+      <p>{text}</p>
       <button>x</button>
     </li>
   );
