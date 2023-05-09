@@ -9,7 +9,7 @@ function App() {
   const defaultTodos = [
     {
       text: "Terminar curso de react",
-      completed: false,
+      completed: true,
     },
     {
       text: "Ir a Platzi Conf",
@@ -25,7 +25,7 @@ function App() {
     },
     {
       text: "Ir al gym",
-      completed: false,
+      completed: true,
     },
     {
       text: "Lavar ropa",
@@ -37,14 +37,6 @@ function App() {
     },
     {
       text: "Tomar más cursos de JuanDC",
-      completed: false,
-    },
-    {
-      text: "Ir al gym",
-      completed: false,
-    },
-    {
-      text: "Lavar ropa",
       completed: false,
     },
   ];

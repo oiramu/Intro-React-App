@@ -11,6 +11,16 @@
 }
 
 .todo-item .check {
+  background: url("../../assets/circle.svg") no-repeat;
+  background-size: 90%;
+  background-position: center center;
+  width: 2.5em;
+  height: 2.5em;
+  border: none;
+  cursor: pointer;
+}
+
+.todo-item .check--active {
   background: url("../../assets/circle-check.svg") no-repeat;
   background-size: 90%;
   background-position: center center;
