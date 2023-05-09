@@ -2,10 +2,10 @@ import "./TodoItem.css";
 
 function TodoItem({ text, completed }) {
   return (
-    <li>
+    <li className="todo-item">
       <button className="check"></button>
       <p>{text}</p>
-      <button>x</button>
+      <button className="close-item"></button>
     </li>
   );
 }

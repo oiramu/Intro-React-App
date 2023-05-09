@@ -1,5 +1,13 @@
+import "./TodoSearch.css";
+import searchIcon from "./assets/search-icon.svg";
+
 function TodoSearch() {
-  return <input placeholder="Buscar todo" />;
+  return (
+    <div className="search-container">
+      <input placeholder="Cortar cebolla" />
+      <img className="search-icon" src={searchIcon} />
+    </div>
+  );
 }
 
 export { TodoSearch };

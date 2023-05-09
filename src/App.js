@@ -9,15 +9,43 @@ import { CreateTodoButton } from "./CreateTodoButton";
 function App() {
   const defaultTodos = [
     {
-      text: "Todo 1",
+      text: "Terminar curso de react",
       completed: false,
     },
     {
-      text: "Todo 2",
+      text: "Ir a Platzi Conf",
       completed: false,
     },
     {
-      text: "Todo 3",
+      text: "Pasear perrito",
+      completed: false,
+    },
+    {
+      text: "Llorar con la llorana bien mucho",
+      completed: false,
+    },
+    {
+      text: "Ir al gym",
+      completed: false,
+    },
+    {
+      text: "Lavar ropa",
+      completed: false,
+    },
+    {
+      text: "Terminar RE4",
+      completed: false,
+    },
+    {
+      text: "Tomar más cursos de JuanDC",
+      completed: false,
+    },
+    {
+      text: "Ir al gym",
+      completed: false,
+    },
+    {
+      text: "Lavar ropa",
       completed: false,
     },
   ];
