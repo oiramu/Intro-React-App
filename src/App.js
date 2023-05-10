@@ -45,21 +45,39 @@ function App() {
 
   const [todos, setTodos] = React.useState(defaultTodos);
   const [searchValue, setSearchValue] = React.useState("");
-  console.log(searchValue);
 
   const totalTodos = todos.length;
   const completedTodos = todos.filter((item) => !!item.completed).length;
   const todosSearch = todos.filter((item) =>
     item.text.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
   );
+  const completeTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex((todo) => todo.text === text);
+    newTodos[todoIndex].completed = true;
+    setTodos(newTodos);
+  };
+
+  const deleteTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex((todo) => todo.text === text);
+    newTodos.splice(todoIndex, 1);
+    setTodos(newTodos);
+  };
 
   return (
     <>
       <TodoCounter total={totalTodos} completed={completedTodos} />
       <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
       <TodoList>
-        {todosSearch.map((todo, index) => (
-          <TodoItem key={index} text={todo.text} completed={todo.completed} />
+        {todosSearch.map((todo) => (
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
+            onComplete={() => completeTodo(todo.text)}
+            onDelete={() => deleteTodo(todo.text)}
+          />
         ))}
       </TodoList>
       <CreateTodoButton />
