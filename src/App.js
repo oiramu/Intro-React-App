@@ -1,3 +1,5 @@
+import React from "react";
+
 import "./App.css";
 import { TodoCounter } from "./Components/TodoCounter/TodoCounter";
 import { TodoSearch } from "./Components/TodoSearch/TodoSearch";
@@ -41,12 +43,22 @@ function App() {
     },
   ];
 
+  const [todos, setTodos] = React.useState(defaultTodos);
+  const [searchValue, setSearchValue] = React.useState("");
+  console.log(searchValue);
+
+  const totalTodos = todos.length;
+  const completedTodos = todos.filter((item) => !!item.completed).length;
+  const todosSearch = todos.filter((item) =>
+    item.text.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
+  );
+
   return (
     <>
-      <TodoCounter total={16} completed={11} />
-      <TodoSearch />
+      <TodoCounter total={totalTodos} completed={completedTodos} />
+      <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
       <TodoList>
-        {defaultTodos.map((todo, index) => (
+        {todosSearch.map((todo, index) => (
           <TodoItem key={index} text={todo.text} completed={todo.completed} />
         ))}
       </TodoList>

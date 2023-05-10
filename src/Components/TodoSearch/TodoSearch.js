@@ -3,10 +3,7 @@ import React from "react";
 import "./TodoSearch.css";
 import searchIcon from "../../assets/search-icon.svg";
 
-function TodoSearch() {
-  const [searchValue, setSearchValue] = React.useState("");
-
-  console.log(searchValue);
+function TodoSearch({ searchValue, setSearchValue }) {
   return (
     <div className="search-container">
       <input
