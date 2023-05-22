@@ -1,13 +1,11 @@
+import React from "react";
 import "./CreateTodoButton.css";
 
-function CreateTodoButton() {
-  const createTodo = (e) => {
-    console.log(e.target);
-  };
+function CreateTodoButton({ setOpenModal }) {
 
   return (
     <div className="createTodo-container">
-      <button onClick={(event) => createTodo(event)}>+</button>
+      <button onClick={() => setOpenModal( state => !state )}>+</button>
     </div>
   );
 }
