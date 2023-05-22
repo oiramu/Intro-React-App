@@ -6,6 +6,11 @@ Este proyecto React Básico fue creado como una muestra de mi capacidad para con
 
 En este repositorio encontrarás el código de todas las clases del [Curso de Introducción a React.js](https://platzi.com/reactjs). Para empezar solo debes clonar este repositorio (`git clone`), instalar sus dependencias (`npm i`) y ejecutar la aplicación (`npm start`).
 
+## Créditos
+@Sharonina
+@platzi
+@juandc
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
